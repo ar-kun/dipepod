@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.2s linear;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* position: relative; */
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-image: url(../img/bg-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+}
+
+i {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+li {
+    list-style: none;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.justify-content-between {
+    justify-content: space-between !important;
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+.col-lg-4 {
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+
+.shadow {
+    border-radius: 20px;
+    padding: 0;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.modal-span {
+    color: #ff4d00;
+}
+
+.p-0 {
+    padding: 0 !important;
+}
+
+.border-bottom-0 {
+    border-bottom: 0 !important;
+}
+
+.modal-body .modal-content {
+    background-color: white;
+    width: 100%;
+    height: auto;
+    border-radius: 25px 25px 20px 20px;
+}
+
+.modal-fitur {
+    background-color: #ff4d00;
+    margin: -20px 80px 0 80px;
+    min-height: 50px;
+    border-radius: 10px;
+    padding-left: 1rem;
+}
+
+.btn-modal {
+    background-color: #d6d6d6;
+    text-decoration: none;
+    padding: 0 5px;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.btn-modal span {
+    color: #182641;
+}
+
+.modal-radius {
+    border-radius: 20px !important;
+}
+
+/* Button */
+.btn-button {
+    background-color: #ff4d00;
+    text-decoration: none;
+    color: white;
+    padding: 0 5px;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Animasi Button */
+.btn-button:hover {
+    color: #ff4d00;
+    transition: all 0.3s;
+    background-color: transparent;
+}
+
+.btn-button:hover:before,
+.btn-button:hover:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    border: 2px solid rgba(19, 42, 89);
+    border-radius: 10px;
+    transition: all 0.5s;
+    -webkit-animation: clippath 3s infinite linear;
+    animation: clippath 3s infinite linear;
+}
+
+.btn-button:hover:after {
+    -webkit-animation: clippath 3s infinite -1.5s linear;
+    animation: clippath 3s infinite -1.5s linear;
+    border-radius: 10px;
+}
+
+/* Akhir Animasi Button */
+/* Akhir Button */
+
+/* Navbar */
+.bg-color {
+    background-color: rgba(19, 42, 89, 0.4);
+}
+
+.navbar .navbar-brand span {
+    color: #ff4d00;
+}
+
+.navbar .navbar-link li span,
+.navbar .navbar-link a span {
+    margin: 0 10px;
+}
+
+.img-profile {
+    height: 2rem;
+    width: 2rem;
+}
+
+.img-review {
+    height: 7rem;
+    width: 7rem;
+}
+
+.img-modal {
+    height: auto;
+    width: 6rem;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/*? underline animation */
+nav .navbar-link .underlineLink {
+    margin: 5px;
+    position: relative;
+}
+
+nav .navbar-link .underlineLink:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff4d00;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav .navbar-link .bg-drop {
+    background-color: #ff4d00;
+}
+
+nav .navbar-link .bg-drop a {
+    color: white;
+}
+
+nav .navbar-link .bg-drop a:hover {
+    background-color: transparent;
+    border-bottom: 2px solid white;
+}
+
+nav .navbar-link .underlineLink:hover {
+    color: #132a59;
+}
+
+nav .navbar-link .underlineLink:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+nav .navbar-link .active:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(1);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff4d00;
+}
+
+/*? Akhir Animasi */
+/* Akhir Navbar */
+.backgourd {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+}
+
+.backgourd img {
+    width: 100%;
+}
+
+/* Serch */
+.no-search {
+    max-width: 800px;
+    margin: 200px auto;
+    padding: 10px 20px;
+}
+
+.serch {
+    max-width: 800px;
+    background-color: rgba(217, 217, 217, 0.7);
+    margin: 200px auto;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+.serch input {
+    width: 500px;
+    background-color: transparent;
+}
+
+/* Beranda */
+.content {
+    position: relative;
+    top: 100px;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    border-radius: 200px 200px 0 0;
+}
+
+.content .fitur {
+    background-color: rgba(19, 42, 89, 0.8);
+    margin: -120px 80px 0 80px;
+    min-height: 250px;
+    border-radius: 25px;
+}
+
+.content .fitur li i {
+    padding-top: 25px;
+    font-size: 5rem;
+}
+
+/* Beranda Profile */
+.br-profile,
+.br-berita,
+.br-update {
+    color: #182641;
+}
+
+.bg-ticket {
+    background-color: #132a59;
+}
+
+.profile-kades {
+    background-color: white;
+    max-width: 300px;
+    border-radius: 25px;
+}
+
+.profile-kades img {
+    width: 100%;
+}
+
+.desk-desa {
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Beranda Berita */
+.square {
+    background-color: #132a59;
+    margin: 0 30px;
+    max-width: 300px;
+    border-radius: 20px;
+    padding: 0;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.square img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* akhir Beranda */
+/* Footer */
+footer {
+    background-color: #132a59;
+    position: relative;
+    margin-top: 200px;
+    padding: 50px 100px;
+}
+
+footer .logo {
+    max-width: 150px;
+}
+
+footer .logo img {
+    width: 100%;
+}
+
+footer .ouraddres i {
+    display: inline;
+}
+
+footer .ouraddres span,
+footer .opening span {
+    display: block;
+}
+
+footer .sosial-media i {
+    font-size: 25px;
+    margin: 0 5px;
+}
+
+/* Akhir Footer */
+/* Keyframe animasi  button clippath*/
+@-webkit-keyframes clippath {
+
+    0%,
+    100% {
+        -webkit-clip-path: inset(0 0 98% 0);
+        clip-path: inset(0 0 98% 0);
+    }
+
+    25% {
+        -webkit-clip-path: inset(0 98% 0 0);
+        clip-path: inset(0 98% 0 0);
+    }
+
+    50% {
+        -webkit-clip-path: inset(98% 0 0 0);
+        clip-path: inset(98% 0 0 0);
+    }
+
+    75% {
+        -webkit-clip-path: inset(0 0 0 98%);
+        clip-path: inset(0 0 0 98%);
+    }
+}
+
+@keyframes clippath {
+
+    0%,
+    100% {
+        -webkit-clip-path: inset(0 0 98% 0);
+        clip-path: inset(0 0 98% 0);
+    }
+
+    25% {
+        -webkit-clip-path: inset(0 98% 0 0);
+        clip-path: inset(0 98% 0 0);
+    }
+
+    50% {
+        -webkit-clip-path: inset(98% 0 0 0);
+        clip-path: inset(98% 0 0 0);
+    }
+
+    75% {
+        -webkit-clip-path: inset(0 0 0 98%);
+        clip-path: inset(0 0 0 98%);
+    }
+}

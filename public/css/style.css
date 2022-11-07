@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    outline: none;
+    transition: 0.2s linear;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Poppins", sans-serif;
+}
+nav {
+    background-color: rgba(19, 42, 89, 0.4);
+}
+nav .navbar-brand span {
+    color: #ff4d00;
+}
+nav .custom-bg {
+    background-color: #ff4d00;
+}
+nav ul .btn-button {
+    background-color: #ff4d00;
+    padding: 0 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+/* Animasi Button */
+nav ul .btn-button:hover {
+    transition: all 0.3s;
+    background-color: transparent;
+}
+nav ul .btn-button:hover:before,
+nav ul .btn-button:hover:after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    bottom: -3px;
+    left: -3px;
+    border: 2px solid rgba(19, 42, 89);
+    border-radius: 10px;
+    transition: all 0.5s;
+    -webkit-animation: clippath 3s infinite linear;
+    animation: clippath 3s infinite linear;
+}
+nav ul .btn-button:hover:after {
+    -webkit-animation: clippath 3s infinite -1.5s linear;
+    animation: clippath 3s infinite -1.5s linear;
+    border-radius: 10px;
+}
+/* Akhir Animasi Button */
+/* Keyframe animasi  button clippath*/
+@-webkit-keyframes clippath {
+    0%,
+    100% {
+        -webkit-clip-path: inset(0 0 98% 0);
+        clip-path: inset(0 0 98% 0);
+    }
+    25% {
+        -webkit-clip-path: inset(0 98% 0 0);
+        clip-path: inset(0 98% 0 0);
+    }
+    50% {
+        -webkit-clip-path: inset(98% 0 0 0);
+        clip-path: inset(98% 0 0 0);
+    }
+    75% {
+        -webkit-clip-path: inset(0 0 0 98%);
+        clip-path: inset(0 0 0 98%);
+    }
+}
+@keyframes clippath {
+    0%,
+    100% {
+        -webkit-clip-path: inset(0 0 98% 0);
+        clip-path: inset(0 0 98% 0);
+    }
+    25% {
+        -webkit-clip-path: inset(0 98% 0 0);
+        clip-path: inset(0 98% 0 0);
+    }
+    50% {
+        -webkit-clip-path: inset(98% 0 0 0);
+        clip-path: inset(98% 0 0 0);
+    }
+    75% {
+        -webkit-clip-path: inset(0 0 0 98%);
+        clip-path: inset(0 0 0 98%);
+    }
+}
+
+/*? underline animation */
+nav .navbar-link .animasiLink {
+    position: relative;
+}
+nav .navbar-link .animasiLink:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff4d00;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+nav .navbar-link .bg-drop {
+    background-color: #ff4d00;
+}
+nav .navbar-link .bg-drop a {
+    color: white;
+}
+nav .navbar-link .bg-drop a:hover {
+    background-color: transparent;
+    border-bottom: 2px solid white;
+}
+nav .navbar-link .animasiLink:hover {
+    color: #132a59;
+}
+nav .navbar-link .animasiLink:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+nav .navbar-link .active:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(1);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff4d00;
+}
+/*? Akhir Animasi */
+/* Akhir Navbar */
